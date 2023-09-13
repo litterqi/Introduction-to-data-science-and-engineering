@@ -1,4 +1,4 @@
-num=int(input("请输入一个数："))
+num=int(input("请输入一个数：")) #使用二分查找的方法，找出立方根的整数部分
 left=0
 right=num
 while left<right :
