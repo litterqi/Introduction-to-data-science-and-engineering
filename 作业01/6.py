@@ -1,0 +1,12 @@
+x=int(input("请输入第一个数："))
+y=int(input("请输入第二个数："))
+z=int(input("请输入第三个数："))
+p=int(input("请输入第四个数："))
+array=[0,0,0,0]
+array[0]=x
+array[1]=y
+array[2]=z
+array[3]=p
+array.sort()
+array.reverse()
+print(array)
