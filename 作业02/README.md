@@ -10,6 +10,7 @@
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/4bca5fa9-ba0c-4f75-afd6-65009d3c3ce3)
 
 #第三题：
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/386a169d-a7d7-4a8b-a680-9da796b87896)
 
 #第四题：
 
