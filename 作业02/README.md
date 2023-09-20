@@ -42,7 +42,7 @@
 
 方法三：使用随机投针法计算圆周率
 
-![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/cbd938cc-1e23-4254-a459-62e3381dbaf4)
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/78bb1423-91c9-4f6b-884a-3901f7eda70a)
 
 #第九题：
 
