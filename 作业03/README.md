@@ -32,3 +32,34 @@
 #第7题：
 
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/830ef9a2-faac-4fbf-a5d6-8fe582777cc0)
+
+第8题：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/4156c28a-bf30-478a-b1d2-3d45e0d89181)
+
+第9题：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/529d7950-a978-4bdf-a0c1-5540fd1d0037)
+
+##第四章：
+
+#第1题：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/5a87f593-8661-423f-a95a-c7670ddd72f4)
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/145118cd-a936-413f-88f0-6b37bd670576)
+
+#第2题：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/60a4c903-6aaa-452c-b444-c05915cc5cf8)
+
+#第3题：
+
+流程图：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/09e9c157-09ac-495c-9055-0914dbb53335)
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/56aaef8e-5646-4bc0-a97a-add61c5f588e)
+
+#第4题：
+
+时间复杂度：O(n^2) 空间复杂度：O(1)
