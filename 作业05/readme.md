@@ -2,7 +2,7 @@
 
 #第4题：
 
-[computer_science.html]
+[computer_science.html](https://github.com/litterqi/Introduction-to-data-science-and-engineering/blob/%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A05/computer_science.html)
 
 #第5题：
 
