@@ -2,7 +2,7 @@
 
 #第1题：
 
-[movie.csv]()
+[movie.csv](https://github.com/litterqi/Introduction-to-data-science-and-engineering/blob/%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A05/movie.csv)
 
 #第2题：
 
