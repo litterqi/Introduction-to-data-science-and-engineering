@@ -1,5 +1,31 @@
 ##第6章：
 
+#第2题：
+
+scrapy框架的优缺点：
+
+优点:
+
+1.快速: scrapy具有处理各种网络爬虫任务的高效性能，并可以快速地从目标网站抓取数据。
+
+2.可扩展性: scrapy支持多种插件，包括下载中间件、存储管道和扩展，使得开发者能够根据自己的需求扩展其功能。
+
+3.完整的功能: scrapy具有完整的功能集合，包括自动重试、自定义请求头、代理管理、cookie管理等，可用于完成各种复杂的网络爬虫任务。
+
+4.强大的选择器: scrapy使用强大的CSS选择器和XPath选择器来定位页面上的元素，帮助用户方便地提取所需数据。
+
+缺点:
+
+1.学习成本高: scrapy需要熟悉一定的Python语言基础和HTML语言知识，因此学习成本较高。
+
+2.资源占用高: scrapy运行时需要占用较高的系统资源，特别是在大规模抓取时可能会占用更多系统资源。
+
+3.运行缓慢: scrapy需要启动和配置操作，而且需要大量的I/O操作来加载和分析页面上的数据，因此可能运行较慢。
+
+#第3题：
+
+[mySpider](https://github.com/litterqi/Introduction-to-data-science-and-engineering/tree/%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A05/mySpider)
+
 #第4题：
 
 [computer_science.html](https://github.com/litterqi/Introduction-to-data-science-and-engineering/blob/%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A05/computer_science.html)
