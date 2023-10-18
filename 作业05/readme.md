@@ -30,6 +30,30 @@ scrapy框架的优缺点：
 4.反爬虫机制：一些网站会采取反爬虫策略，如设置访问速率限制、页面解析难度提高等，这会增加爬取的难度，需要采取相应的策略和技术来应对。
 ### 第3题：
 
+Scrapy爬虫主要分为四部份：
+
+新建项目(scrapy startproject xxx)：新建一个新的爬虫项目。
+
+明确目标(编写items.py)：明确你想要抓取的目标。
+
+制作爬虫(spiders/xxspider.py)：制作爬虫开始爬取网页。
+
+存储内容(pipelines.py)：设计管道存储爬取内容。
+
+其他主要文件：
+
+scrapy.cfg: 项目的配置文件。
+
+mySpider/: 项目的Python模块，将会从这里引用代码。
+
+mySpider/items.py: 项目的目标文件。
+
+mySpider/pipelines.py: 项目的管道文件。
+
+mySpider/settings.py: 项目的设置文件。
+
+mySpider/spiders/: 存储爬虫代码目录。
+
 [mySpider](https://github.com/litterqi/Introduction-to-data-science-and-engineering/tree/%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A05/mySpider)
 
 ### 第4题：
