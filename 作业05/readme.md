@@ -7,6 +7,8 @@
 
 ### 第2题：
 
+参考教程：[Scrapy入门](https://www.runoob.com/w3cnote/scrapy-detail.html)
+
 scrapy框架的优缺点：
 
 优点:
