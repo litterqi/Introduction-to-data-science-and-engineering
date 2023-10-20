@@ -7,7 +7,7 @@
 
 ### 第2题：
 
-![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/6de8ff6c-41dd-47f8-a569-a37218834665)
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/5720e64c-c35f-4e7e-b57e-35613e5b3072)
 
 ### 第3题：
 
@@ -21,10 +21,26 @@
 
 ### 第5题：
 
-我们使用numpy的cov函数来计算协方差矩阵。参数data是包含原始数据的矩阵，bias=True表示对于样本数据使用无偏估计。cov函数返回计算得到的协方差矩阵C。
+我们使用numpy的cov函数来计算协方差矩阵。参数data是包含原始数据的矩阵。当`bias=True`时，np.cov函数会采用无偏估计来计算样本协方差矩阵。在无偏估计中，分母为 n−1，其中 
+n表示样本量。这种计算方法可以更好地反映样本之间的关系，因为它减少了在统计学上可能出现的偏差。但是，对于较小的样本量，由于减去了自由度的数量，可能会导致方差估计偏低，从而影响协方差矩阵的准确性。
+
+当`bias=False`时，np.cov 函数会采用有偏估计来计算样本协方差矩阵。在有偏估计中，分母为 n，不需要减去自由度的数量，但是会将样本方差略微高估，可能会导致比无偏估计稍微错误的协方差矩阵。
+
+cov函数返回计算得到的协方差矩阵C。
+
+`bias=True`情况下的结果为：
 
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/f5e7f8c5-ef42-4092-b2aa-3b923e1b7ed8)
 
-### 第6题：
+`bias=False`情况下的结果为：
 
-![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/ac0bdb69-dc6d-4c8e-9377-2ec865a87079)
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/a8f4cf6d-9eb0-4f9b-8415-05df6dd6b61b)
+
+### 第6题：
+上一题`bias=True`情况下的结果为：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/9e14b5f1-7833-42a1-9528-f4d148c07645)
+
+上一题`bias=False`情况下的结果为：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/8d7f363f-23b5-458e-adfc-5eca9c9fddd1)
