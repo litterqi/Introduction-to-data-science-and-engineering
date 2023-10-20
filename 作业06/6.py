@@ -1,15 +1,10 @@
-
 import numpy as np
-
+#输入矩阵
 data = np.array([[1, -1, 4],
                  [2, 1, 3],
                  [1, 3, -1]])
-
-C = np.cov(data,bias=True)
-eigenvalues, eigenvectors = np.linalg.eig(C)
-
-print("协方差矩阵C的全部特征值:")
-print(eigenvalues)
-
-print("协方差矩阵C的全部特征向量:")
-print(eigenvectors) 
+A = np.cov(data, bias=True)
+#求解特征值和其对应的特征向量
+eigval,eigvec = np.linalg.eig(A)
+for i in range(len(eigval)):
+    print(f'特征值：{eigval[i]}\n对应的特征向量:\n{eigvec[i]}\n')
