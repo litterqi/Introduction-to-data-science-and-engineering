@@ -44,8 +44,12 @@ Unicode高亮：避免在支持的语言中高亮字符。
 切换亮/暗主题：快速切换首选的亮和暗主题。
 
 ### 贡献者活跃度滚榜
-[<img src="https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg" width="600" height="300"
-/>](https://www.youtube.com/embed/<VIDEO_ID>)
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/27ae11a6-81f4-4dab-9a2c-87ecf2cf3c5e)
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/9d650a0c-57ab-4b8f-a893-ae9e208dda57)
+
+观察[活跃度滚榜](https://github.com/microsoft/vscode/pulse?redirect=perceptor)，发现在早期bpasero稳居第一，而后来被VSCodeTriageBot取代。(证明人再卷也卷不过机器)
+
+[bpasero](https://github.com/bpasero)(Benjamin Pasero)正是VScode创始人之一。
 
 ### 项目关系网络图
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/57e919d4-71aa-4366-92f1-3584a9fa7d60)
