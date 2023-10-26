@@ -1,4 +1,6 @@
 # 第六周作业
+## 10.5实践：
+[结果](https://github.com/litterqi/Introduction-to-data-science-and-engineering/tree/%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A06/10.5%E5%AE%9E%E8%B7%B5)
 ## 第十章：
 
 ### 第1题：
