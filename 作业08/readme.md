@@ -23,6 +23,7 @@
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/9afcba6d-0648-423b-bb93-827527e11c5f)
 
 ### 第5题：
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/ab097e9d-4f25-4d48-9e54-0f5144f7ae08)
 
 ### 第8题：
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/6855dab6-0bd2-4126-9d57-99a850c8fc28)
