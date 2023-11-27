@@ -33,6 +33,12 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 导入numpy，pandas，plotly，missingno等库用于数据处理。使用os库中的walk()函数读取数据集文件。
 
 ```
+df.dropna()
+```
+
+使用dropna()函数从数据集中删除包含任何缺失值的行。
+
+```
 df = pd.read_csv("/kaggle/input/nbaplayersdraft.csv")
 df.head()
 ```
