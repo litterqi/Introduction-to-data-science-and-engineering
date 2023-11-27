@@ -429,4 +429,76 @@ df.describe().style.background_gradient(cmap = "Blues")
   </tbody>
 </table>
 
-使用describe()函数来生成关于数据的描述性统计信息，包括球员各项数据的计数、均值、标准差、最小值、25%分位数、50%分位数、75%分位数和最大值。
+使用describe()函数来生成关于数据的描述性统计信息，包括球员各项数值的计数、均值、标准差、最小值、25%分位数、50%分位数、75%分位数和最大值。
+
+```
+plt.figure(figsize = (20,10))
+sns.countplot(data=df,x="year");
+```
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/d91b0585-ac69-45d5-96d4-7314a79e8d84)
+
+统计1989-2021年每年参加选秀的球员人数。NBA规定每年选秀60人，但有些年份出现了特殊情况(比如球队被没收选秀权等)。
+## 相关性分析
+接下来我们通过绘制图像分析选秀顺位高低与球员综合实力间的相关关系。
+### 总得分与选秀顺位间的关系
+```
+df0 = df[df["games"] > 250]
+
+fig = px.scatter_3d(df0, x = "year", y = "overall_pick", z = "points", 
+                    opacity = 0.75, hover_data = ["player"],
+                    color = "overall_pick", color_continuous_scale = "haline_r")
+
+fig.update_traces(marker = dict(size = 3.5)) # scaling down the markers
+fig.update_layout(template = "plotly_dark", font = dict(family = "PT Sans", size = 12))
+fig.show()
+```
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/a08d449a-1d1e-4f64-85bc-a8c96e271290)
+
+对数据集中满足比赛场数大于250场的球员绘制3d散点图，其中x轴表示年份（"year"列），y轴表示选秀顺位（"overall_pick"列），z轴表示得分（"points"列）。可以看出总体上球员选秀顺位越高，生涯总得分也相应越高。
+
+### 场均得分与选秀顺位间的关系
+```
+df0 = df[df["games"] > 0]
+
+sorted_df = df0.sort_values(by = "overall_pick", ascending = True)
+
+fig = px.scatter_3d(sorted_df, x = "games", y = "year", z = "points_per_game",
+                    range_x = (0, 1500), range_z = (0, 30),
+                    hover_data = ["player"], animation_frame = "overall_pick", 
+                    range_color = (0, 25), color = "points_per_game", color_continuous_scale = "jet")
+
+fig.update_traces(marker = dict(size = 5)) # scaling down the markers
+fig.update_layout(template = "plotly_dark", font = dict(family = "PT Sans", size = 12))
+fig.show()
+```
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/9e46312b-025e-405f-ab13-b74b8b768bb0)
+
+相比于总得分，球员的场均得分或许更能直观地体现球员的得分能力与进攻效率。按选秀顺位绘制球员场均得分散点图，我们便能发现，总的来看，高顺位球员在场均得分方面的确优于低顺位球员。然而，即便是每年的状元秀(首轮第1顺位被选中)，仍有球员表现平庸；与此同时，有的球员虽然选秀顺位不高，但其得分能力依然能名列前茅。我们可以认为这种球员的数据为**异常点**。
+
+为了更直观细致地进行数据的横向和纵向对比，我们可以绘制球员数值的特征矩阵。
+
+```
+fig = px.scatter(df, x = "overall_pick", y = "year", hover_data = ["player", "team"],
+                 color = "points_per_game", color_continuous_scale = "Jet",
+                 title = f"NBA Draft Points Per Game by Year and Overall Pick")
+
+fig.update_traces(marker = dict(size = 8, symbol = "square")) # scaling the markers
+fig.update_layout(template = "plotly_dark", font = dict(family = "PT Sans", size = 20))
+fig.show()
+```
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/e8b113a8-2324-4e1c-8489-595aa0836dc3)
+
+```
+fig = px.scatter(df, x = "overall_pick", y = "year", hover_data = ["player", "team"],
+                 color = "average_minutes_played", color_continuous_scale = "Jet",
+                 title = f"NBA Draft Average Minutes Played by Year and Overall Pick")
+
+fig.update_traces(marker = dict(size = 8, symbol = "square")) # scaling the markers
+fig.update_layout(template = "plotly_dark", font = dict(family = "PT Sans", size = 20))
+fig.show()
+```
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/2a1e9c55-d5d8-408b-8c7a-44beee6e176a)
+
+以上2张图反映了球员的场均得分与场均上场时间与选秀顺位和选秀年份之间的关系。从中我们可以看到异常数据点的分布情况。
+
+## 异常情况分析
