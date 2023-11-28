@@ -508,3 +508,38 @@ fig.show()
 以上2张图反映了球员的场均得分与场均上场时间与选秀顺位和选秀年份之间的关系。从中我们可以看到异常数据点的分布情况。
 
 ## 异常情况分析
+
+## 构建预测模型
+在分析完球员数据的异常分布情况后，我们可以尝试构建模型以实现通过选秀顺位来预测球员的球场表现。
+
+```
+X = df[['rank']]
+y_points = df['points_per_game']
+y_minutes = df['average_minutes_played']
+
+X_train, X_test, y_train_points, y_test_points = train_test_split(X, y_points, test_size=0.5, random_state=23)
+X_train, X_test, y_train_minutes, y_test_minutes = train_test_split(X, y_minutes, test_size=0.5, random_state=23)
+
+model_points = LinearRegression()
+model_minutes = LinearRegression()
+
+model_points.fit(X_train, y_train_points)
+model_minutes.fit(X_train, y_train_minutes)
+
+y_pred_points = model_points.predict(X_test)
+y_pred_minutes = model_minutes.predict(X_test)
+
+accuracy_points = mean_squared_error(y_test_points, y_pred_points)
+accuracy_minutes = mean_squared_error(y_test_minutes, y_pred_minutes)
+
+mae_points = mean_absolute_error(y_test_points, y_pred_points)
+mae_minutes = mean_absolute_error(y_test_minutes, y_pred_minutes)
+
+print("场均得分均方误差:",accuracy_points)
+print("场均上场时间均方误差:",accuracy_minutes)
+print("场均得分平均绝对误差:",mae_points)
+print("场均上场时间平均绝对误差:",mae_minutes)
+```
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/544bf4f1-926e-469e-b9cd-85accd3819ad)
+
+构建2个线性回归模型分别用于预测球员场均得分(points_per_game)和场均出场时间(average_minutes_played)。根据选秀顺位(rank)训练模型，并返回预测模型的均方误差和平均绝对误差。
