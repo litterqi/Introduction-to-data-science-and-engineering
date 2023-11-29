@@ -21,6 +21,7 @@
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import plotly.express as px #graphing
+import matplotlib.pyplot as plt
 import missingno as msno #describe data
 import os
 
@@ -30,7 +31,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 ```
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/1f9eef49-f66f-4db2-8bbd-b98ba5cd5ec1)
 
-导入numpy，pandas，plotly，missingno等库用于数据处理。使用os库中的walk()函数读取数据集文件。
+导入numpy，pandas等库用于数据处理，plotly，matplotlib等库用于绘制图像。使用os库中的walk()函数读取数据集文件。
 
 ```
 df.dropna()
@@ -519,6 +520,11 @@ fig.show()
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/b4a1fe8d-d4fa-43d1-838d-37ee6363ad31)
 
 从图中数据可以看出，每年以前10顺位被选中的球员并非都表现十分出色。场均10分以上的人数甚至不到40%，而场均0-5分和5-10分的球员分别占31.8%和31.2%。同时，在以选秀顺位20-30甚至30以后的排名进入联盟的球员中，仍分别有接近20%与10%的球员场均得分能够上双，并且有2%左右的球员可以场均得到15分以上。
+
+进一步，我们可以定义1-10顺位，10-20顺位，20-30顺位以及30顺位以后球员的场均得分异常值分别为0-10分，0-5分，15+，10+，则可以画出以下的异常分布柱状图：
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/2c6784ad-6c65-4ee1-a6fa-5ed2e992db39)
+
 ## 构建预测模型
 在分析完球员数据的异常分布情况后，我们可以尝试构建模型以实现通过选秀顺位来预测球员的球场表现。由于球员各项数值与选秀顺位之间基本呈线性关系，这里我们选取线性回归模型进行训练。
 
