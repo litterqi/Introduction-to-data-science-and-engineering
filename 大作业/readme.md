@@ -510,7 +510,15 @@ fig.show()
 ## 异常情况分析
 我们重点研究球员场均得分这一数值的异常数据分布情况。将数据集中的球员按照选秀顺位分为1-10顺位，10-20顺位，20-30顺位以及30顺位以后，分别观察其场均得分的分布情况，绘制出如下的饼状图：
 
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/6f49dcf8-bb56-4a9f-b2db-d2ff037c8024)
 
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/abf2872d-86ac-4473-ac92-9c65236064a1)
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/3eb5ef69-b902-401b-9da4-5ad6df14b0c0)
+
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/b4a1fe8d-d4fa-43d1-838d-37ee6363ad31)
+
+从图中数据可以看出，每年以前10顺位被选中的球员并非都表现十分出色。场均10分以上的人数甚至不到40%，而场均0-5分和5-10分的球员分别占31.8%和31.2%。同时，
 ## 构建预测模型
 在分析完球员数据的异常分布情况后，我们可以尝试构建模型以实现通过选秀顺位来预测球员的球场表现。由于球员各项数值与选秀顺位之间基本呈线性关系，这里我们选取线性回归模型进行训练。
 
