@@ -447,6 +447,18 @@ sns.countplot(data=df,x="year");
 统计1989-2021年每年参加选秀的球员人数。NBA规定每年选秀60人，但有些年份出现了特殊情况(比如球队被没收选秀权等)。
 ## 相关性分析
 接下来我们通过绘制图像分析选秀顺位高低与球员综合实力间的相关关系。
+```
+string_columns = df.select_dtypes(include=['object']).columns
+df = df.drop(columns=string_columns)
+
+fig,ax=plt.subplots(1,1,figsize=(20,12))
+sns.heatmap(df.corr(),annot=True,linewidths=1)
+plt.show()
+```
+使用热力图表示各项数值之间的相关关系。
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/6a26b75b-ca4b-40ee-9dab-bd95e95a0adb)
+
+接下来我们重点分析球员得分与顺位之间的关系。
 ### 总得分与选秀顺位间的关系
 ```
 df0 = df[df["games"] > 250]
