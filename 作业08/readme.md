@@ -1,7 +1,7 @@
 # 第八周作业：
 ## 第十三章：
 ### 第1题：
-![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/503ab736-fdd6-450a-9195-0317d54cbe1e)
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/e7e223b4-0b73-4eb5-85b4-85084a850de8)
 
 ### 第2题：
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/ac22d946-eb7b-4dfb-a225-8b5615ab3f10)
