@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
-import pandas as pd
+import seaborn as sns
 from sklearn.datasets import load_iris
-from pandas.plotting import scatter_matrix
+import pandas as pd
 iris = load_iris()
-data = iris.data
-feature_names = iris.feature_names
-iris_df = pd.DataFrame(data, columns=feature_names)
-iris_df['target'] = iris.target
-scatter_matrix(iris_df, alpha=0.9, figsize=(11,11), diagonal='hist')
-plt.suptitle("Iris Dataset Features", y=0.95)
+def mirror(x):
+    return iris.target_names[int(x)]
+iris.target=list(map(mirror,iris.target))
+data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+data['target'] = iris.target
+sns.set(style="ticks")
+sns.pairplot(data, hue="target")
 plt.show()
