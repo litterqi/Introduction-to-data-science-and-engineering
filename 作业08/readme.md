@@ -13,6 +13,12 @@
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/7226b5e4-6998-4ea5-a610-3eefbe9e4713)
 
 ## 第十四章：
+### 实践1：
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/75a15a87-f7a1-451d-b028-63d32f672cc8)
+
+### 实践2：
+![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/727ddd3f-22f0-4aab-8f6c-3071d209f16a)
+
 ### 第2题：
 ![image](https://github.com/litterqi/Introduction-to-data-science-and-engineering/assets/123362884/b8383767-2a8f-4ee6-b5c0-31fb8a38b0ce)
 
